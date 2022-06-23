@@ -29,7 +29,7 @@ public class SmileControllerIntegrationTest {
 
     mvc.perform(MockMvcRequestBuilders.post("/api/smiles")
       .contentType(MediaType.APPLICATION_JSON)
-      .content("\"isCrying\": \"true\", \"isLaughing\": \"false\"")
+      .content("{\"isCrying\": \"true\", \"isLaughing\": \"false\"}"));
       assertEquals(1, repository.count());
   }
 }
