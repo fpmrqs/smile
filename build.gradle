@@ -20,10 +20,6 @@ dependencies {
   // Spring can do many things. We want it to run a web application, so we depend on that part.
   implementation 'org.springframework.boot:spring-boot-starter-web'
 
-  // Use Spring Security to implement login and signup
-  implementation 'org.springframework.boot:spring-boot-starter-security'
-  testImplementation 'org.springframework.security:spring-security-test'
-
   // Use Spring Boot's library for validation
   implementation 'org.springframework.boot:spring-boot-starter-validation'
 
@@ -43,4 +39,13 @@ dependencies {
 
 tasks.named('test') {
 	useJUnitPlatform()
+}
+
+test {
+  useJUnitPlatform()
+  systemProperty 'spring.profiles.active', 'test'
+}
+
+bootRun {
+  systemProperty 'spring.profiles.active', 'dev'
 }

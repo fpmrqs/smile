@@ -9,7 +9,9 @@ public class Smile {
 
   private boolean isCrying;
   private boolean isLaughing;
-
+  
+  public Smile() {}
+  
   public Smile(boolean isCrying, boolean isLaughing) {
     this.isCrying = isCrying;
     this.isLaughing = isLaughing;
