@@ -1,4 +1,5 @@
 package com.fran.smile.smile;
+
 import javax.persistence.*;
 
 @Entity
@@ -9,9 +10,10 @@ public class Smile {
 
   private boolean isCrying;
   private boolean isLaughing;
-  
-  public Smile() {}
-  
+
+  public Smile() {
+  }
+
   public Smile(boolean isCrying, boolean isLaughing) {
     this.isCrying = isCrying;
     this.isLaughing = isLaughing;
@@ -40,5 +42,5 @@ public class Smile {
   public void setIsLaughing(boolean isLaughing) {
     this.isLaughing = isLaughing;
   }
-  
+
 }
